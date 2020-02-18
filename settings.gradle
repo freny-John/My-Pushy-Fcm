@@ -1,2 +1,2 @@
 include ':app', ':chooserx'
-rootProject.name='My-Pushy-FCM'
+rootProject.name='My-Pushy-Fcm'
