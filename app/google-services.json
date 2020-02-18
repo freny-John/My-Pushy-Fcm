@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "798872550731",
+    "firebase_url": "https://my-app-cea7c.firebaseio.com",
+    "project_id": "my-app-cea7c",
+    "storage_bucket": "my-app-cea7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798872550731:android:e74d047bbbc56f95783cce",
+        "android_client_info": {
+          "package_name": "com.freny.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798872550731-j63g17okhj52lr5bt7bgoa3ra2ppc9n3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9HFbVvjTqlc1lWGwNopo1kNhXA3baBe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798872550731-j63g17okhj52lr5bt7bgoa3ra2ppc9n3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798872550731:android:3f93914c5d35fc4d783cce",
+        "android_client_info": {
+          "package_name": "com.freny.messaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798872550731-j63g17okhj52lr5bt7bgoa3ra2ppc9n3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9HFbVvjTqlc1lWGwNopo1kNhXA3baBe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798872550731-j63g17okhj52lr5bt7bgoa3ra2ppc9n3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798872550731:android:5a933d335d8a5173783cce",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798872550731-j63g17okhj52lr5bt7bgoa3ra2ppc9n3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9HFbVvjTqlc1lWGwNopo1kNhXA3baBe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798872550731-j63g17okhj52lr5bt7bgoa3ra2ppc9n3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
