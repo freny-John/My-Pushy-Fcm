@@ -1,15 +1,23 @@
 package com.freny.messaging.pushy;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.RingtoneManager;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.freny.messaging.R;
 
 import me.pushy.sdk.Pushy;
@@ -26,8 +34,9 @@ public class PushReceiver extends BroadcastReceiver {
             notificationText = intent.getStringExtra("message");
         }
 
+
         // Prepare a notification with vibration, sound and lights
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
+        final NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setAutoCancel(true)
                 .setSmallIcon(R.mipmap.ic_notify)
                 .setContentTitle(notificationTitle)
@@ -37,6 +46,25 @@ public class PushReceiver extends BroadcastReceiver {
                 .setColor(context.getResources().getColor(R.color.colorPrimary))
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setContentIntent(PendingIntent.getActivity(context, 0, new Intent(context, PushyActivity.class), PendingIntent.FLAG_UPDATE_CURRENT));
+
+        Glide.with(context)
+                .asBitmap()
+                .load("https://www.termsfeed.com/public/uploads/2019/07/sample-disclaimer-template-update.jpg")
+                .into(new CustomTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+
+                        builder.setStyle(
+                                new NotificationCompat.BigPictureStyle().bigPicture(resource))
+                                .setPriority(Notification.PRIORITY_HIGH);
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) {
+                    }
+                });
+
+
 
         // Automatically configure a Notification Channel for devices running Android O+
         Pushy.setNotificationChannel(builder, context);
